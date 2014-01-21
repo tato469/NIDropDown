@@ -8,18 +8,29 @@
 
 #import <UIKit/UIKit.h>
 
+#define kAnimatedDuration     0.3f
+
 @class NIDropDown;
+
 @protocol NIDropDownDelegate
-- (void) niDropDownDelegateMethod: (NIDropDown *) sender;
+- (void) niDropDownDelegateMethod:(NIDropDown *)sender;
 @end
 
 @interface NIDropDown : UIView <UITableViewDelegate, UITableViewDataSource>
 {
-    NSString *animationDirection;
-    UIImageView *imgView;
+  NSString *animationDirection;
+  UIImageView *imgView;
 }
-@property (nonatomic, retain) id <NIDropDownDelegate> delegate;
-@property (nonatomic, retain) NSString *animationDirection;
--(void)hideDropDown:(UIButton *)b;
-- (id)showDropDown:(UIButton *)b:(CGFloat *)height:(NSArray *)arr:(NSArray *)imgArr:(NSString *)direction;
+
+@property (nonatomic, assign) id <NIDropDownDelegate> delegate;
+@property (nonatomic, strong) NSString *animationDirection;
+
+
+- (void)hideDropDown:(UIButton *)b;
+
+- (id)showDropDown:(UIButton *)btn
+            height:(CGFloat *)height
+        datasource:(NSArray *)arr
+            images:(NSArray *)imgArr
+         direction:(NSString *)direction;
 @end
