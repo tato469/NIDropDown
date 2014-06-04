@@ -16,7 +16,9 @@
 }
 
 @property (retain, nonatomic) IBOutlet UIButton *btnSelect;
+
 - (IBAction)selectClicked:(id)sender;
 
 -(void)rel;
+
 @end

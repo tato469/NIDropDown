@@ -1,0 +1,11 @@
+platform :ios, '7.0'
+
+target "NIDropDown" do
+  pod "NIDropDown", :path => "../"
+end
+
+# Uncomment the following lines to add testing dependencies
+# target "DemoTests" do
+#   pod 'Expecta'
+# end
+

@@ -1,0 +1,17 @@
+PODS:
+  - NIDropDown (0.1.0):
+    - SQCommonUtils
+  - SQCommonUtils (0.2.2)
+
+DEPENDENCIES:
+  - NIDropDown (from `../`)
+
+EXTERNAL SOURCES:
+  NIDropDown:
+    :path: ../
+
+SPEC CHECKSUMS:
+  NIDropDown: 98dfd4644b4675ecbcfd094c8e3ec6b0256b0ae3
+  SQCommonUtils: 00da089d3f6aaaea574217b0d92e7ecb3b828b84
+
+COCOAPODS: 0.32.1
