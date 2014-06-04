@@ -8,9 +8,9 @@ Pod::Spec.new do |s|
                        DESC
   s.homepage         = "https://github.com/shjborage/NIDropDown"
   s.screenshots      = "https://raw.githubusercontent.com/shjborage/NIDropDown/master/Screen%20Shot.png"
-  s.license          = 'MIT'
+  s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { "shjborage" => "shjborage@gmail.com" }
-  s.source           = { :git => "https://github.com/shjborage/NIDropDown", :tag => 'v0.1.0'}
+  s.source           = { :git => "https://github.com/shjborage/NIDropDown.git", :tag => 'v0.1.0'}
 
   s.platform              = :ios, '5.0'
   s.ios.deployment_target = '5.0'
