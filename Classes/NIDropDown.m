@@ -10,6 +10,8 @@
 #import "QuartzCore/QuartzCore.h"
 #import <SQCommonHeader.h>
 
+ #define kScreenSize [[UIScreen mainScreen] bounds].size
+
 @interface NIDropDown () <
 UITableViewDelegate,
 UITableViewDataSource
@@ -34,7 +36,6 @@ UITableViewDataSource
 - (id)init
 {
   if (self = [super init]) {
-    
   }
   return self;
 }
@@ -67,10 +68,11 @@ UITableViewDataSource
   self.layer.shadowOpacity = 0.5;
   
   _table = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, btnFrame.size.width, 0)];
+  [_table setBounces:FALSE];
   _table.delegate = self;
   _table.dataSource = self;
   _table.layer.cornerRadius = 5;
-  _table.backgroundColor = [UIColor colorWithRed:0.239 green:0.239 blue:0.239 alpha:1];
+    _table.backgroundColor = [UIColor colorWithRed:0.239 green:0.239 blue:0.239 alpha:1];
   _table.separatorStyle = UITableViewCellSeparatorStyleNone;
 //  _table.separatorColor = [UIColor darkGrayColor];
   
@@ -80,8 +82,8 @@ UITableViewDataSource
     self.frame = CGRectMake(btnFrame.origin.x, btnFrame.origin.y-height, btnFrame.size.width, height);
   } else if (direction == NID_DOWN) {
     self.frame = CGRectMake(btnFrame.origin.x, btnFrame.origin.y+btnFrame.size.height, btnFrame.size.width, height);
-    if (self.originY+self.height > kScreenSize.height)
-      self.height = kScreenSize.height - self.originY;
+    if (self.frame.origin.y+self.height > kScreenSize.height)
+      self.height = kScreenSize.height - self.frame.origin.y;
   }
   _table.frame = CGRectMake(0, 0, btnFrame.size.width, height);
   [UIView commitAnimations];
@@ -162,10 +164,10 @@ UITableViewDataSource
     cell.textLabel.textColor = [UIColor whiteColor];
     
     UIView *v = [[UIView alloc] init];
-    v.backgroundColor = RGB(0x666666);
+      v.backgroundColor = [UIColor colorWithRed:0.239 green:0.239 blue:0.239 alpha:1];//RGB(0x666666);
     cell.backgroundView = v;
     UIView *sv = [[UIView alloc] init];
-    sv.backgroundColor = RGB(0xff9f00);
+    sv.backgroundColor = [UIColor clearColor];//RGB(0xff9f00);
     cell.selectedBackgroundView = sv;
     
     if ([_dataSource respondsToSelector:@selector(niDropDown:titleForRowAtIndexPath:)])
