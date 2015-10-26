@@ -13,6 +13,8 @@ install
 
 install with [CocoaPods](http://cocoapods.org)
 
+    pod 'NIDropDown', :git => 'https://github.com/tato469/NIDropDown.git'
+
 License
 -------
 
