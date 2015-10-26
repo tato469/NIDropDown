@@ -3,6 +3,11 @@ NIDropDown
 
 NiDropDown gives a proper animated drop down menu like effect.
 
+<img src="https://github.com/tato469/NIDropDown/blob/master/Screen%20Shot.png" width="200">
+<img src="https://github.com/tato469/NIDropDown/blob/master/Screen%20Shot%202.png" width="200">
+
+
+
 install
 -----
 
