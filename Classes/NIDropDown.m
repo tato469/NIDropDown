@@ -8,7 +8,7 @@
 
 #import "NIDropDown.h"
 #import "QuartzCore/QuartzCore.h"
-#import <SQCommonHeader.h>
+#import "SQCommonHeader.h"
 
  #define kScreenSize [[UIScreen mainScreen] bounds].size
 
